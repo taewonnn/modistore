@@ -16,11 +16,11 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const categories = [
-    { name: '상의', href: '/products/상의' },
-    { name: '하의', href: '/products/하의' },
-    { name: '신발', href: '/products/신발' },
-    { name: '가방', href: '/products/가방' },
-    { name: '액세서리', href: '/products/액세서리' },
+    { name: '상의', href: '/products/top' },
+    { name: '하의', href: '/products/bottom' },
+    { name: '신발', href: '/products/shoes' },
+    { name: '가방', href: '/products/bag' },
+    { name: '액세서리', href: '/products/acc' },
   ]
 
   return (
