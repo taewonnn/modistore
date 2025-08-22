@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 모디스토어 (ModiStore)
 
-## Getting Started
+모디스토어 - Next.js + Node.js + Supabase
 
-First, run the development server:
+## 🏗️ 프로젝트 구조
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+modistore/
+├── frontend/          → Next.js 15 (App Router)
+│   ├── src/
+│   │   ├── app/       → 페이지 라우팅
+│   │   ├── components/ → UI 컴포넌트
+│   │   └── data/      → 정적 데이터
+│   └── package.json
+├── backend/           → Node.js Express API
+│   ├── server.js      → 메인 서버
+│   ├── routes/        → API 라우트
+│   └── package.json
+└── shared/            → 공통 코드
+    └── types/         → TypeScript 타입 정의
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ 기술 스택
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Lucide React** (아이콘)
 
-## Learn More
+### Backend
+- **Node.js**
+- **Express.js**
+- **Supabase** (PostgreSQL)
+- **TypeScript**
 
-To learn more about Next.js, take a look at the following resources:
+### 공통
+- **TypeScript** (타입 공유)
+- **ESLint** (코드 품질)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 주요 기능
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [x] 반응형 레이아웃 (Header, Footer)
+- [x] 카테고리별 상품 목록
+- [x] 상품 상세 페이지
+- [ ] 장바구니 시스템
+- [ ] 사용자 인증
+- [ ] 주문 시스템
+- [ ] 검색 기능
+- [ ] 마이페이지
 
-## Deploy on Vercel
+## 🎯 포트폴리오 하이라이트
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Monorepo 구조**: 프론트엔드 + 백엔드 통합 관리
+- **타입 안정성**: TypeScript로 타입 공유
+- **실시간 기능**: Supabase 실시간 데이터베이스
+- **반응형 디자인**: 모바일 우선 디자인
+- **성능 최적화**: Next.js App Router 활용
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
