@@ -10,18 +10,11 @@ import {
   Menu,
   X
 } from 'lucide-react'
+import { categories } from '@/data/categories'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-
-  const categories = [
-    { name: '상의', href: '/products/top' },
-    { name: '하의', href: '/products/bottom' },
-    { name: '신발', href: '/products/shoes' },
-    { name: '가방', href: '/products/bag' },
-    { name: '액세서리', href: '/products/acc' },
-  ]
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
@@ -54,7 +47,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             {categories.map((category) => (
               <Link
-                key={category.name}
+                key={category.id}
                 href={category.href}
                 className="text-gray-700 hover:text-gray-900 font-medium"
               >
@@ -138,7 +131,7 @@ export default function Header() {
             <div className="flex flex-col gap-4">
               {categories.map((category) => (
                 <Link
-                  key={category.name}
+                  key={category.id}
                   href={category.href}
                   className="text-gray-700 hover:text-gray-900 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}

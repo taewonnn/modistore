@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Share, Heart, MessageCircle, Play } from 'lucide-react'
+import { categories } from '@/data/categories'
 
 export default function Footer() {
   return (
@@ -33,31 +34,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">쇼핑</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link href="/products/top" className="hover:text-white">
-                  상의
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/bottom" className="hover:text-white">
-                  하의
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/shoes" className="hover:text-white">
-                  신발
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/bag" className="hover:text-white">
-                  가방
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/acc" className="hover:text-white">
-                  액세서리
-                </Link>
-              </li>
+              {categories.map((category) => (
+                <li key={category.id}>
+                  <Link href={category.href} className="hover:text-white">
+                    {category.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
