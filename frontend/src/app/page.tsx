@@ -56,19 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 브랜드 섹션 */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">브랜드</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {['브랜드 A', '브랜드 B', '브랜드 C', '브랜드 D'].map((brand) => (
-              <div key={brand} className="bg-gray-100 p-6 rounded-lg text-center hover:bg-gray-200 transition-colors">
-                <h3 className="font-semibold">{brand}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
     </div>
   )
 }
