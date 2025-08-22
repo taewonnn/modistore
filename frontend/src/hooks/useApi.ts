@@ -1,16 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import { categoryApi } from '@/services/apiService';
+import { productApi } from '@/services/apiService';
 
-
-
-// 카테고리 훅
-export function useCategories() {
+// 상품 가져오기 훅
+export function useProducts() {
   return useQuery({
-    queryKey: ['categories'],
+    queryKey: ['products'],
     queryFn: async () => {
-      const response = await categoryApi.getAll();
+      const response = await productApi.getAll();
       return response.data;
     },
   });
 }
-
