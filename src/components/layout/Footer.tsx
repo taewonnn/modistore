@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
+import { Share, Heart, MessageCircle, Play } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -15,16 +15,16 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Facebook className="w-5 h-5" />
+                <Share className="w-5 h-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Instagram className="w-5 h-5" />
+                <Heart className="w-5 h-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Twitter className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Youtube className="w-5 h-5" />
+                <Play className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -34,27 +34,27 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">쇼핑</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/products/상의" className="hover:text-white">
+                <Link href="/products/top" className="hover:text-white">
                   상의
                 </Link>
               </li>
               <li>
-                <Link href="/products/하의" className="hover:text-white">
+                <Link href="/products/bottom" className="hover:text-white">
                   하의
                 </Link>
               </li>
               <li>
-                <Link href="/products/신발" className="hover:text-white">
+                <Link href="/products/shoes" className="hover:text-white">
                   신발
                 </Link>
               </li>
               <li>
-                <Link href="/products/가방" className="hover:text-white">
+                <Link href="/products/bag" className="hover:text-white">
                   가방
                 </Link>
               </li>
               <li>
-                <Link href="/products/액세서리" className="hover:text-white">
+                <Link href="/products/acc" className="hover:text-white">
                   액세서리
                 </Link>
               </li>
@@ -134,7 +134,7 @@ export default function Footer() {
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               <p>© 2024 모디스토어. All rights reserved.</p>
               <p className="mt-1">
-                사업자등록번호: 123-45-67890 | 대표: 홍길동 | 
+                사업자등록번호: 123-45-67890 | 대표: tw | 
                 주소: 서울특별시 강남구 테헤란로 123
               </p>
             </div>
