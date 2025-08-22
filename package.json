@@ -27,5 +27,8 @@
     "typescript"
   ],
   "author": "tw",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@tanstack/react-query-devtools": "^5.85.5"
+  }
 }
