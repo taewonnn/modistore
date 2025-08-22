@@ -1,6 +1,6 @@
-import { Category } from '@/data/categories';
-import { api, ApiResponse } from '@/lib/api';
-import { Product } from '@/types/types';
+import { api } from '@/lib/api';
+import { ApiResponse, Category, Product } from '@/types';
+
 
 // 카테고리 관련 API
 export const categoryApi = {
@@ -9,7 +9,6 @@ export const categoryApi = {
     return api.get<ApiResponse<Category[]>>('/api/categories');
   },
 
- 
 };
 
 // 상품 관련 API

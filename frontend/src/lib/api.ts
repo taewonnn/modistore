@@ -1,17 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 import { API_BASE_URL } from '../../config';
 
-export interface ApiResponse<T> {
-  data: T;
-  message?: string;
-  status?: number;
-  error?: string;
-}     
-
-export interface ApiError {
-  error: string;
-  status?: number;
-}
 
 // axios 인스턴스 생성
 const apiClient: AxiosInstance = axios.create({
