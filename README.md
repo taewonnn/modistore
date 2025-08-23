@@ -2,6 +2,26 @@
 
 모디스토어 - Next.js + Node.js + Supabase
 
+
+## 🛠️ 기술 스택
+
+### Frontend
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Lucide React** (아이콘)
+
+### Backend
+- **Node.js**
+- **Express.js**
+- **Supabase** (PostgreSQL)
+- **TypeScript**
+
+### 공통
+- **TypeScript** (타입 공유)
+- **ESLint** (코드 품질)
+
+
 ## 🏗️ 프로젝트 구조
 
 ```
@@ -21,23 +41,6 @@ modistore/
 ```
 
 
-## 🛠️ 기술 스택
-
-### Frontend
-- **Next.js 15** (App Router)
-- **TypeScript**
-- **Tailwind CSS 4**
-- **Lucide React** (아이콘)
-
-### Backend
-- **Node.js**
-- **Express.js**
-- **Supabase** (PostgreSQL)
-- **TypeScript**
-
-### 공통
-- **TypeScript** (타입 공유)
-- **ESLint** (코드 품질)
 
 ## 📁 주요 기능
 
