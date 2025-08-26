@@ -14,10 +14,13 @@
     "dev:backend": "npm run dev --workspace=backend",
     "build": "npm run build --workspace=frontend",
     "start": "npm run start --workspace=frontend",
-    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend"
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5"
   },
   "keywords": [
     "nextjs",
