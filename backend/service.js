@@ -1,13 +1,17 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { supabase } from './config/supabase.js';
+
+// 라우터 import
+import categoriesRouter from './routes/categories.js';
+import productsRouter from './routes/products.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// 미들웨어
 app.use(cors());
 app.use(express.json());
 
@@ -16,16 +20,9 @@ app.get('/', (req, res) => {
   res.json({ message: 'ModiStore API is running!' });
 });
 
-// 카테고리 조회
-app.get('/api/categories', async (req, res) => {
-  try {
-    const { data, error } = await supabase.from('categories').select('*');
-    if (error) throw error;
-    res.json({ data });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+// API 라우터 연결
+app.use('/api/categories', categoriesRouter);
+app.use('/api/products', productsRouter);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
